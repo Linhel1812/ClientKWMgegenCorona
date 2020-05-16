@@ -1,0 +1,12 @@
+<div class= "content">
+    <div class= "header" >{{ shoppinglist.name }}</div>
+    <div class= "metadata">
+        <div class="creator"><p class="listtxt">Ersteller: {{shoppinglist.creator_id}}</p></div><br/>
+        <div *ngIf="shoppinglist.shopper_id"class="shopper"><p class="listtxt">Shopper: {{shoppinglist.shopper_id}}</p></div><br/>
+        <div class="due_date">
+            <div><p class="listtxt">Fälligkeitsdatum: {{shoppinglist.due_date}}</p></div>
+        </div><br/>
+        <div *ngIf="shoppinglist.actual_price "class="actual_price"><p class="listtxt">Einkaufspreis: {{shoppinglist.actual_price}} €</p></div><br/>
+    </div>
+    <!--div *ngFor="let item of shoppinglist.items;">{{item.id}} {{item.name}} {{item.quantity}}</div-->
+</div>
